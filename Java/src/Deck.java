@@ -21,6 +21,10 @@ public class Deck {
         return new Deck(cards);
     }
 
+public void shuffle(int times){
+        Collections.shuffle(cards);
+}
+
     public int countRemainingCards() {
         return cards.size();
     }
