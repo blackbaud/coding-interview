@@ -1,0 +1,49 @@
+﻿# To learn more about .editorconfig see https://aka.ms/editorconfigdocs
+
+root = true
+
+###############################################################
+# File Rules
+###############################################################
+
+# All files
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 4
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Specific file rules
+[*.{json,xml,csproj}]
+indent_size = 2
+
+[*.cs]
+# IDE0054: Use compound assignment
+dotnet_style_prefer_compound_assignment = true:silent
+
+# CA2007: Consider calling ConfigureAwait on the awaited task
+dotnet_diagnostic.CA2007.severity = none
+
+# CA1822: Mark members as static
+dotnet_diagnostic.CA1822.severity = none
+
+# CA1062: Validate arguments of public methods
+dotnet_diagnostic.CA1062.severity = none
+
+# CA1707: Identifiers should not contain underscores
+dotnet_diagnostic.CA1707.severity = none
+
+# CA1812: Internal class is never instantiated
+dotnet_diagnostic.CA1812.severity = none
+
+# CA2234: Call HttpClient with uri instead of string
+dotnet_diagnostic.CA2234.severity = none
+
+# IDE0022: Use block body for methods
+dotnet_diagnostic.IDE0022.severity = none
+
+# CA1000: Do not declare static members on generic types
+dotnet_diagnostic.CA1000.severity = none
+csharp_style_namespace_declarations=file_scoped:warning

@@ -16,7 +16,7 @@ application.
 During the coding interview you will edit the attached solution files in an IDE while sharing your
 screen.
 
-Visual Studio, VS Code, or Rider are all acceptable IDEs. The code targets .NET 6.0.
+Visual Studio, VS Code, or Rider are all acceptable IDEs. The code targets .NET 8.0.
 
 If you are unable to use an IDE during the interview, a browser-based option is available using
 [https://vscode.dev](https://vscode.dev). Using vscode.dev requires signing in with either a GitHub
@@ -27,7 +27,7 @@ or Microsoft account.
 -   [Visual Studio 2022 Community Edition](https://visualstudio.microsoft.com/downloads/)
 -   [VS Code](https://code.visualstudio.com/) with the
     [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
--   [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download)
+-   [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download)
 
 ---
 
@@ -36,11 +36,17 @@ or Microsoft account.
 ## The Deck of cards
 
 You have been given an object model (in Blackbaud.Interview.Cards) for a
-standard deck of 52 playing cards.
+[standard deck](https://en.wikipedia.org/wiki/Standard_52-card_deck)
+of 52 [playing cards](https://en.wikipedia.org/wiki/Playing_card).
+(Follow links for more explanation of these terms, if you're not familiar with a deck of cards.)
 
--   52 cards. The value of each card is the combined rank and suit.
--   13 ranks: Numbers 2-10, Jack, Queen, King, and Ace
--   4 suits: Spades, Hearts, Diamonds, and Clubs
+![Standard deck of 52 playing cards](./docs/cards.jpg)
+
+The classes in the object model are:
+-   `Deck`: A collection of 52 `cards`
+-   52 `Cards`: The value of each card is the combined `rank` and `suit`
+-   13 `Ranks`: Numbers 2-10, Jack, Queen, King, and Ace
+-   4 `Suits`: Spades, Hearts, Diamonds, and Clubs
 
 A new deck always has the same order for the cards.
 
