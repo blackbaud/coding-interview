@@ -5,7 +5,17 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blackbaud.Interview.Cards", "Blackbaud.Interview.Cards\Blackbaud.Interview.Cards.csproj", "{0E1C3217-A9FA-4394-A9F0-7281D758E3B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbaud.Interview.Cards.Tests", "Blackbaud.Interview.Cards.Tests\Blackbaud.Interview.Cards.Tests.csproj", "{6EB5B0A4-0936-47AA-80DD-98C672EDD110}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blackbaud.Interview.Cards.Tests", "Blackbaud.Interview.Cards.Tests\Blackbaud.Interview.Cards.Tests.csproj", "{6EB5B0A4-0936-47AA-80DD-98C672EDD110}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F348E06-2266-4A81-9625-9F3E6ACAE359}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{876FA713-685A-4429-948D-22E7E7EA8153}"
+	ProjectSection(SolutionItems) = preProject
+		docs\cards.jpg = docs\cards.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +34,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{876FA713-685A-4429-948D-22E7E7EA8153} = {1F348E06-2266-4A81-9625-9F3E6ACAE359}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF25C050-5B6B-40E3-9027-1B797EE59F78}

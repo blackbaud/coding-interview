@@ -34,13 +34,21 @@ or Microsoft account.
 
 # <a name="question"></a>Deck of cards interview question
 
+
 ## The Deck of cards
 
-You have been given an object model for a standard deck of 52 playing cards.
+You have been given an object model for a
+[standard deck](https://en.wikipedia.org/wiki/Standard_52-card_deck)
+of 52 [playing cards](https://en.wikipedia.org/wiki/Playing_card).
+(Follow links for more explanation of these terms, if you're not familiar with a deck of cards.)
 
--   52 cards
--   13 ranks: 2-10, Jack, Queen, King, and Ace
--   4 suits: Spades, Hearts, Diamonds, and Clubs
+![Standard deck of 52 playing cards](./docs/cards.jpg)
+
+The classes in the object model are:
+-   `Deck`: A collection of 52 `cards`
+-   52 `Cards`: The value of each card is the combined `rank` and `suit`
+-   13 `Ranks`: Numbers 2-10, Jack, Queen, King, and Ace
+-   4 `Suits`: Spades, Hearts, Diamonds, and Clubs
 -   no jokers
 
 A new deck always has the same order for the cards.
