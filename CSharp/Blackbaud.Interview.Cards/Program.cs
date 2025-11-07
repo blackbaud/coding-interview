@@ -2,7 +2,7 @@ namespace Blackbaud.Interview.Cards;
 
 public static class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Part 1 Create a new deck and deal out all the cards
 
@@ -12,8 +12,14 @@ public static class Program
         // Create a new deck
         var deck = Deck.NewDeck();
 
-        // TODO: shuffle the deck
+        // shuffle the deck
         Console.WriteLine("Shuffling...");
+        int times = 1;
+        if (args != null && args.Length > 0 && int.TryParse(args[0], out var parsed) && parsed > 1)
+        {
+            times = parsed;
+        }
+        deck.Shuffle(times);
 
         // Deal all the cards
         while (!deck.Empty)
