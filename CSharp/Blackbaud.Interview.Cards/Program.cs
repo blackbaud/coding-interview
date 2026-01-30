@@ -11,10 +11,10 @@ public static class Program
 
         // Create a new deck
         var deck = Deck.NewDeck();
-
+        IShuffler shuffler=new FisherYatesShuffler();
         // TODO: shuffle the deck
         Console.WriteLine("Shuffling...");
-
+        deck.ShuffleCards(shuffler,shuffleRounds:100,seed:null);
         // Deal all the cards
         while (!deck.Empty)
         {

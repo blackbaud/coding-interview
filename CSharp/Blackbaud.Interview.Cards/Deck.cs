@@ -57,5 +57,16 @@ public class Deck
             return null;
         }
     }
+    public void ShuffleCards(IShuffler shuffler, int? shuffleRounds = null, int? seed = null)
+    {
+        if(shuffler is null) throw new ArgumentNullException(nameof(shuffler));
+        var cards=_stackOfCards.Reverse().ToList();
+        shuffler.shuffle(cards,shuffleRounds,seed);
+        _stackOfCards.Clear();
+        foreach(var card in cards)
+        {
+            _stackOfCards.Push(card);
+        }
+    }
 
 }
