@@ -11,9 +11,11 @@ public static class Program
 
         // Create a new deck
         var deck = Deck.NewDeck();
+       
 
         // TODO: shuffle the deck
         Console.WriteLine("Shuffling...");
+         deck = deck.Shuffle(3);
 
         // Deal all the cards
         while (!deck.Empty)
