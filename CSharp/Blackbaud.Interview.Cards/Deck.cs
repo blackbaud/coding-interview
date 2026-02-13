@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Blackbaud.Interview.Cards;
 
 /// <summary>
@@ -56,6 +60,33 @@ public class Deck
         {
             return null;
         }
+         /// <summary>
+        /// Shuffles the deck a given number of times and returns a new shuffled deck.
+        /// </summary>
+        public Deck Shuffle(int times)
+        {
+            if (times <= 0)
+                throw new ArgumentException("Number of shuffles must be greater than zero.");
+
+            var cards = _stackOfCards.ToList();
+
+            var random = new Random();
+
+            for (int t = 0; t < times; t++)
+            {
+                for (int i = cards.Count - 1; i > 0; i--)
+                {
+                    int j = random.Next(i + 1);
+
+                    var temp = cards[i];
+                    cards[i] = cards[j];
+                    cards[j] = temp;
+                }
+            }
+
+            return new Deck(cards);
+        }
+
     }
 
 }
