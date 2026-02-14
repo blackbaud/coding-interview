@@ -39,7 +39,22 @@ public class Deck
     /// Returns true if there are no remaining cards in the deck
     /// </summary>
     public bool Empty => RemainingCards == 0;
-
+public void Shuffle(int times = 1)
+{
+    var cards = _stackOfCards.ToList();
+    var rng = new Random();
+    for (int t = 0; t < times; t++)
+    {
+        for (int i = cards.Count - 1; i > 0; i--)
+        {
+            int j = rng.Next(i + 1);
+            (cards[i], cards[j]) = (cards[j], cards[i]);
+        }
+    }
+    _stackOfCards.Clear();
+    foreach (var card in cards)
+        _stackOfCards.Push(card);
+}
     /// <summary>
     /// Removes the next card from the deck.
     /// </summary>
