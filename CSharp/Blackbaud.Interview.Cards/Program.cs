@@ -13,7 +13,10 @@ public static class Program
         var deck = Deck.NewDeck();
 
         // TODO: shuffle the deck
+        Console.WriteLine("How many times shufle:");
+        int times = int.Parse(Console.ReadLine());
         Console.WriteLine("Shuffling...");
+        deck.MimicHumanShuffle(times);
 
         // Deal all the cards
         while (!deck.Empty)
