@@ -59,6 +59,14 @@ public class Deck
         }
     }
 
+    /// <summary>
+    /// Shuffles the deck using the Fisher-Yates algorithm, producing a uniform,
+    /// unbiased random ordering of the remaining cards.
+    /// </summary>
+    /// <param name="times">
+    /// The number of shuffle passes to perform. A single Fisher-Yates pass already
+    /// yields a uniform permutation, so additional passes do not increase randomness.
+    /// </param>
     public void Shuffle(int times = 1)
     {
         for (int t = 0; t < times; t++)
@@ -77,6 +85,13 @@ public class Deck
         }
     }
 
+    /// <summary>
+    /// Shuffles the deck by mimicking a human riffle shuffle: the deck is split near
+    /// the middle into two halves, which are then interleaved in small random clumps.
+    /// A single riffle only partially randomizes the deck, so repeating it (roughly
+    /// seven times for a 52-card deck) is recommended for a well-mixed result.
+    /// </summary>
+    /// <param name="times">The number of riffle shuffles to perform.</param>
     public void MimicHumanShuffle(int times = 1)
     {
         for (int t = 0; t < times; t++)
@@ -84,6 +99,7 @@ public class Deck
             var cards = _stackOfCards.ToList();
 
             int mid = cards.Count / 2 + _random.Next(-2, 3);
+            mid = Math.Clamp(mid, 0, cards.Count); // guard against small decks (e.g. after dealing)
             var leftHand = cards.GetRange(0, mid);
             var rightHand = cards.GetRange(mid, cards.Count - mid);
 
