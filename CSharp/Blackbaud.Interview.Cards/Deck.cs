@@ -6,6 +6,7 @@ namespace Blackbaud.Interview.Cards;
 public class Deck
 {
     private readonly Stack<Card> _stackOfCards;
+    private readonly Random _random = new();
 
     /// <summary>
     /// Private constructor for a new deck of <paramref name="cards"/>.
